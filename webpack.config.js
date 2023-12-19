@@ -2,7 +2,7 @@ const path = require("path");
 const { Configuration: DevServerConfiguration } = require("webpack-dev-server");
 
 module.exports = {
-  entry: "./index.ts",
+  entry: "./index.tsx",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),

@@ -1,3 +1,8 @@
+import * as React from "react";
+import { createRoot } from "react-dom/client";
+
+const App = () => <div>This is a react component</div>;
+
 export default class MyFirstComponent extends HTMLElement {
   constructor() {
     super();
@@ -8,7 +13,11 @@ export default class MyFirstComponent extends HTMLElement {
     const container = document.createElement("div");
     const contentSpan = document.createElement("span");
     contentSpan.innerText = "Hello from inside the shadow root!";
+    contentSpan.setAttribute("id", "app-root");
     container.appendChild(contentSpan);
+
+    const root = createRoot(contentSpan);
+    root.render(<App />);
     shadow.appendChild(container);
   }
 }
