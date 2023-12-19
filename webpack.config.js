@@ -7,6 +7,7 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
+  devtool: "eval-source-map",
   devServer: {
     static: [
       path.join(__dirname, "dist"), // Include the 'dist' directory
@@ -30,6 +31,10 @@ module.exports = {
     rules: [
       // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
       { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
 };

@@ -10,6 +10,9 @@
   "devDependencies": {
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "css-loader": "^6.8.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
@@ -17,7 +20,21 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@sproutsocial/racine": "^20.11.0",
+    "@sproutsocial/seeds-border": "^1.4.0",
+    "@sproutsocial/seeds-color": "^2.0.0",
+    "@sproutsocial/seeds-depth": "^3.3.0",
+    "@sproutsocial/seeds-icons": "^1.2.1",
+    "@sproutsocial/seeds-motion": "^1.6.0",
+    "@sproutsocial/seeds-networkcolor": "^2.14.0",
+    "@sproutsocial/seeds-space": "^0.7.0",
+    "@sproutsocial/seeds-typography": "^3.5.0",
+    "add": "^2.0.6",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dates": "^21.8.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.1",
+    "yarn": "^1.22.21"
   }
 }

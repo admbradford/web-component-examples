@@ -1,7 +1,24 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
+import {
+  Button,
+  ThemeProvider,
+  sproutLightTheme,
+  Badge,
+} from "@sproutsocial/racine";
 
-const App = () => <div>This is a react component</div>;
+const App = () => {
+  return (
+    <div>
+      <ThemeProvider theme={sproutLightTheme}>
+        <Button size="large" onClick={() => console.log("Clicked!")}>
+          Click me
+        </Button>
+        <Badge>This is a badge</Badge>
+      </ThemeProvider>
+    </div>
+  );
+};
 
 export default class MyFirstComponent extends HTMLElement {
   constructor() {
