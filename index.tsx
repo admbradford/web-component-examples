@@ -1,5 +1,6 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
+import {StyleSheetManager} from 'styled-components';
 import {
   Button,
   ThemeProvider,
@@ -34,7 +35,9 @@ export default class MyFirstComponent extends HTMLElement {
     container.appendChild(contentSpan);
 
     const root = createRoot(contentSpan);
-    root.render(<App />);
+    root.render(
+      <StyleSheetManager target={container}><App /></StyleSheetManager>
+    );
     shadow.appendChild(container);
   }
 }
